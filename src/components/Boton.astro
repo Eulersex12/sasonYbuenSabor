@@ -1,0 +1,35 @@
+---
+interface Props {
+	title: string;
+    ruta: string;
+    fondo: string;
+    ancho: string;
+    hover: string;
+    alto: string;
+    txtColor: string;
+    textResponsive:string
+}
+
+const { title, ruta, fondo, ancho, alto, hover, txtColor, textResponsive } = Astro.props;
+---
+<div class="btn-nuevo" style=`background-color: ${fondo}; width:${ancho}; height: ${alto}` onmouseover={`this.style.backgroundColor='${hover}'`} onmouseout={`this.style.backgroundColor='${fondo}'`}>
+    <a href={ruta} >
+        <span class={`font-boton font-bold ${textResponsive}`} style=`color: ${txtColor}`>{title}</span>
+    </a>
+</div>
+
+<style>
+    .btn-nuevo {
+        border-radius: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.856);
+
+        & a{
+            width: 100%;
+            height: 100%;
+            display: flex;   
+            justify-content: center;   
+            align-items: center;
+        }
+        
+    }
+</style>

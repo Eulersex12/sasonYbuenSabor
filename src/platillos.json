@@ -1,0 +1,145 @@
+{
+    "desayunos": [
+      {
+        "nombre": "Tamales",
+        "descripcion": "Maíz relleno de carne o pollo con aceitunas y especias.",
+        "imagen": "https://static.wixstatic.com/media/9755d8_4aa4b21644a241b28dc2a60b646785a4~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/9755d8_4aa4b21644a241b28dc2a60b646785a4~mv2.jpg"
+      },
+      {
+        "nombre": "Pan con Chicharrón",
+        "descripcion": "Carne de cerdo frita acompañada de camote y pan.",
+        "imagen": "https://www.peru.travel/Contenido/Uploads/Sandwichs%20Interior%201_637411445773809291.jpg"
+      },
+      {
+        "nombre": "caldo de Gallina",
+        "descripcion": "Un gran plato de Caldo de gallina, acompañada con su pan.",
+        "imagen": "https://origin.cronosmedia.glr.pe/large/2021/08/03/lg_61097bcbb6df8e0fdc17c059.jpg"
+      },
+      {
+        "nombre": "Mazamorra",
+        "descripcion": "Un buen vazo de mazamorra, acompañado de pan o sanduich",
+        "imagen": "https://comedera.com/wp-content/uploads/sites/9/2022/06/Mazamorra-morada-shutterstock_1530917543.jpg?w=500&h=500&crop=1"
+      },
+      {
+        "nombre": "Emoliente",
+        "descripcion": "Un buen vaso de Emoliente, para la buena Salud",
+        "imagen": "https://cdn0.recetasgratis.net/es/posts/7/1/8/emoliente_peruano_76817_orig.jpg"
+      },
+      {
+        "nombre": "Jugos",
+        "descripcion": "Jugos de Papaya, Naranja, etc. A pedido del Cliente",
+        "imagen": "https://imgmedia.buenazo.pe/1200x660/buenazo/original/2021/01/29/6014be7b4dd2b71586786d5e.jpg"
+      }
+    ],
+    "almuerzos": [
+      {
+        "nombre": "Ceviche",
+        "descripcion": "Pescado marinado en jugo de limón con cebolla, ají y cilantro.",
+        "imagen": "https://buenazo.cronosmedia.glr.pe/original/2020/09/09/5f58f8c082c2f615f804ffdb.jpg"
+      },
+      {
+        "nombre": "Lomo Saltado",
+        "descripcion": "Tiras de carne salteadas con cebolla, tomate y papas fritas.",
+        "imagen": "https://recetasdecocina.elmundo.es/wp-content/uploads/2024/02/lomo-saltado.jpg"
+      },
+      {
+        "nombre": "Aji de Gallina",
+        "descripcion": "Pollo desmenuzado en salsa de ají amarillo, leche y pan.",
+        "imagen": "https://img-global.cpcdn.com/recipes/d2a30b55a2ee44d6/1200x630cq70/photo.jpg"
+      },
+      {
+        "nombre": "Arroz con Pollo",
+        "descripcion": "Arroz cocido con pollo, cilantro y otras especias.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPo1YDGpp7EIBE2NyI_unq1qb4YRk4ZHeQ7A&s"
+      },
+      {
+        "nombre": "Seco de Cordero",
+        "descripcion": "Cordero marinado con jugo de culantro y otras especias, acompañado con arroz",
+        "imagen": "https://img-global.cpcdn.com/recipes/7b309e5f07ea5302/1200x630cq70/photo.jpg"
+      },
+      {
+        "nombre": "Cuy al Horno",
+        "descripcion": "Arroz cocido, Cuy Horneado con cilantro y otras especias.",
+        "imagen": "https://cuyperu.com/wp-content/uploads/2019/08/receta-cuy-al-horno.jpg"
+      }
+      
+    ],
+    "cenas": [
+      {
+        "nombre": "Pollo a la Braza",
+        "descripcion": "Pollo horneado durante una hora, con papas fritas",
+        "imagen": "https://polleriaslagranja.com/wp-content/uploads/2022/10/La-Granja-Real-Food-Chicken-1.4-de-Pollo-a-la-Brasa.png"
+      },
+      {
+        "nombre": "Anticuchos",
+        "descripcion": "Carne de Córazon de Rez, azados a las brazas",
+        "imagen": "https://www.recetas-argentinas.com/base/stock/Recipe/anticuchos-de-corazon/anticuchos-de-corazon_web.jpg.webp"
+      },
+      {
+        "nombre": "Rocoto Relleno",
+        "descripcion": "Pimientos rocoto rellenos de carne, queso y otros ingredientes.",
+        "imagen": "https://quesoslaricura.com/wp-content/uploads/quesos-la-ricura-rocoto-relleno.jpg"
+      },
+      {
+        "nombre": "Pollo a la Plancha",
+        "descripcion": "Chuleta de pollo asado a las Brasas.",
+        "imagen": "https://www.lacocinadelila.com/wp-content/uploads/2021/10/pollo-a-la-plancha.jpg?v=1634892812"
+      },
+      {
+        "nombre": "Aguadito de Pollo",
+        "descripcion": "Sopa de pollo con arroz, culantro y vegetales.",
+        "imagen": "https://perudelights.com/wp-content/uploads/2016/01/Chicken-Aguadito_-jpg-1.jpg"
+      },
+      {
+        "nombre": "Chaufa de Pollo",
+        "descripcion": "Arroz fritado con especias dentro de un Boul .",
+        "imagen": "https://comidaschilenas.com/wp-content/uploads/2022/02/Receta-de-arroz-chaufa-peruano.jpg"
+      }
+
+    ],
+    "servicios": [
+      { 
+        "nombre": "Menú a la Carta", 
+        "descripcion": "Variedad de platos principales, entradas, bebidas y postres.", 
+        "icono": "fa-utensils" 
+      }, 
+      { 
+        "nombre": "Menú del Día", 
+        "descripcion": "Menú fijo que cambia diariamente, ofreciendo opciones frescas y variadas a un precio especial.", 
+        "icono": "fa-calendar-day" 
+      }, 
+      { 
+        "nombre": "Entrega a Domicilio", 
+        "descripcion": "Disfruta de nuestra comida desde la comodidad de tu hogar.", 
+        "icono": "fa-truck" 
+      }, 
+      { 
+        "nombre": "Reservas Online", 
+        "descripcion": "Sistema de reservas en línea para facilitar la planificación de tus visitas.", 
+        "icono": "fa-calendar-check" 
+      }, 
+      { 
+        "nombre": "Catering para Eventos", 
+        "descripcion": "Servicios de catering para bodas, cumpleaños y reuniones corporativas.", 
+        "icono": "fa-concierge-bell" 
+      }, 
+      { "nombre": "Menú para Niños", 
+        "descripcion": "Opciones especiales para los más pequeños, adaptadas a sus gustos y necesidades.", 
+        "icono": "fa-child" 
+      }, 
+      { "nombre": "Bebidas Especiales", 
+        "descripcion": "Carta de vinos, cócteles y bebidas especiales que complementan nuestros platos.", 
+        "icono": "fa-cocktail" 
+      }, 
+      { 
+        "nombre": "Promociones y Descuentos",
+        "descripcion": "Ofertas especiales y descuentos en ciertos días o para eventos específicos.", 
+        "icono": "fa-tags" 
+      }, 
+      { 
+        "nombre": "Eventos Especiales", 
+        "descripcion": "Noches temáticas, música en vivo, degustaciones y otros eventos para atraer a nuestros clientes.", 
+        "icono": "fa-music" }
+    ]
+  }
+  

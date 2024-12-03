@@ -1,0 +1,111 @@
+
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--color2);
+    border: 1px solid var(--color2);
+    border-radius: 10px;
+    font-family: var(--parrafo);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.651);
+    & h2 {
+        text-align: center;
+        margin-bottom: 2%;
+        font-family: var(--parrafo); 
+        color: var(--color3);
+    }
+  }
+
+  .caja-datos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & .dato-name, .dato-apel {
+        display: flex;
+        flex-direction: column;
+    }
+    & .dato-name {
+        width: 38%;
+    }
+    & .dato-apel {
+        width: 58%;
+    }
+  }
+  .caja-dni{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & .dato-name, .dato-apel {
+        display: flex;
+        flex-direction: column;
+    }
+    & .dato-name {
+        width: 30%;
+    }
+    & .dato-apel {
+        width: 66%;
+    }
+  }
+  .caja-fecha{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    & .dato-name, .dato-apel {
+        display: flex;
+        flex-direction: column;
+    }
+    & .dato-name {
+        width: 54%;
+    }
+    & .dato-apel {
+        width: 38%;
+    }
+  }
+  label { 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    color: var(--color3); 
+    font-family: var(--title); 
+  }
+  input, select { 
+    margin-bottom: 20px; 
+    padding: 10px; 
+    border: 1px solid rgb(194, 191, 191); 
+    border-radius: 5px; 
+    font-family: var(--parrafo); 
+    color: var(--color3); 
+  } 
+  input:focus, select:focus { 
+    border-color: var(--color7); 
+    outline: none; 
+    box-shadow: 0 0 5px var(--color7); 
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: var(--color5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--boton);
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    background-color:#0ab649;
+  }
+  
+  button:hover {
+    background-color: var(--color6);
+  }
+  
+  

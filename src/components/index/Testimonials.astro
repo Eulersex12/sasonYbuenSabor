@@ -1,0 +1,74 @@
+---
+const testimonials = [
+  {
+    nombre: "Juan Pérez",
+    comentario: "El servicio fue excelente, realmente superó mis expectativas.",
+    imagen: "https://impactolatino.com/wp-content/uploads/2016/06/17.jpg"
+  },
+  {
+    nombre: "María González",
+    comentario: "La calidad del producto es excepcional, muy recomendado.",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEDvqpn7xIcKvSv5kYEPm_DORdRcVQfa82nA&s"
+  },
+  {
+    nombre: "Carlos Ramírez",
+    comentario: "Muy satisfecho con la atención al cliente, siempre muy atentos.",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhdqXU22JQrYQ4Ptimo1CKp3HSQOnx_1Lxmg&s"
+  }
+];
+---
+
+<div class="w-11/12 md:w-4/5 mx-auto flex justify-between gap-10">
+  {testimonials.map(testimonial => (
+    <div class="w-full flex flex-col items-center">
+      <img src={testimonial.imagen} alt={testimonial.nombre} class="w-20 h-20 object-cover rounded-full mt-2" />
+      <h3 class="text-title text-color3 mb-2">{testimonial.nombre}</h3>
+      <p class="text-parrafo text-color4 text-center">"{testimonial.comentario}"</p>
+    </div>
+  ))}
+</div>
+<div class="w-full md:w-4/5 mx-auto md:flex my-10">
+      <div class="md:w-1/2 w-full mt-3 flex items-center">
+        <h2 class="text-[3rem] ml-10 md:ml-0 font-title text-center text-color4">Ingresa tu comentario</h2>
+      </div>
+
+      <form class="md:w-1/2 w-4/5 mx-auto h-[250px] mt-5 p-5 flex flex-col bg-color1 rounded-xl shadow-shadow1">
+        <label class="relative w-full h-[40%] mb-3 grid">
+          <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            placeholder=" " 
+            class="peer w-full rounded-lg border border-color7 px-6 text-color7 focus:outline-none focus:border-color7"
+            required
+          />
+          <span 
+            class="absolute left-4 top-[45%] transform -translate-y-1/2 bg-color1 px-2 text-color4 transition-all peer-placeholder-shown:top-[45%] peer-placeholder-shown:text-color4 peer-placeholder-shown:translate-y-0 peer-focus:top-0 peer-focus:translate-y-[-50%] peer-focus:text-color3 peer-focus:text-sm uppercase font-bold"
+          >
+            Ingresa tu nombre
+          </span>
+        </label>
+    
+        <label class="relative w-full h-[60%] mb-3 grid">
+          <input 
+            type="text" 
+            id="description" 
+            name="description" 
+            placeholder=" " 
+            class="peer w-full rounded-lg border border-color7 px-6 py-1 text-color7 focus:outline-none focus:border-color7"
+            required
+          />
+          <span 
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-color1 px-2 text-color4 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-color4 peer-placeholder-shown:translate-y-0 peer-focus:top-0 peer-focus:translate-y-[-50%] peer-focus:text-color3 peer-focus:text-sm uppercase font-bold"
+          >
+            Descripción
+          </span>
+        </label>
+    
+        <input 
+          type="submit" 
+          value="Enviar" 
+          class="w-full h-[46px] bg-color7 text-color1 font-title font-bold uppercase rounded-md shadow-shadow2"
+        />
+      </form>
+</div>

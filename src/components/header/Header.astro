@@ -1,0 +1,76 @@
+---
+import Link from './Link.astro';
+import RedesSociales from './RedesSociales.astro';
+import IconoDelivery from './IconoDelivery.astro';
+---
+<div class="w-full h-12 grid grid-cols-3 bg-color1 
+            md:w-4/5 md:h-24 md:mx-auto 
+            xl:w-4/5 xl:h-24 xl:mx-auto ">
+        <div class="w-full h-full flex items-center justify-center  ">
+            <i class="fa-solid fa-headset mx-1 text-lg md:text-3xl xl:text-4xl"></i>
+            <div class="w-4/5">
+                <h4 class="text-xs text-justify leading-none font-boton md:text-xl md:leading-none">Soporte al Cliente</h4>
+                <h5 class="text-xs leading-none font-title md:text-xl md:leading-none">51+ 999 999 99</h5>
+            </div>
+        </div>
+        <div class="w-full h-full flex justify-center items-center ">
+            <img src="/cuy-vector.svg" alt="logo-cuy" class='w-1/4'>
+            <h2 class="text-xs text-center font-title leading-none uppercase md:text-xl xl:text-2xl">Sazón <br>y<br>buen sabor</h2>
+        </div>
+        <div class="w-full h-full flex justify-end items-center ">
+            <a class="text-3xl md:text-4xl xl:text-5xl border-r-2 border-color9 pr-1" href="/administrador"><i class="fa-solid fa-user"></i></a>
+            <div class="relative">
+                <div>
+                    <IconoDelivery />
+                </div>
+                <span class="w-3 h-3 top-1 right-1 md:w-5 md:h-5 flex justify-center items-center absolute md:top-0 md:right-0 rounded-xl bg-color9 text-color9">
+                    <p class='text-xs md:text-base text-color1'>0</p>     
+                </span>
+                
+            </div>
+            <button id="menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+</div>
+<div class="hidden md:w-full md:h-20 md:flex justify-center bg-base">
+    <div class="w-4/5 h-full flex justify-between">
+        <Link
+            content='md:w-[60%] xl:w-[50%] h-full'
+            direccion='w-full h-full grid grid-cols-4'/>
+        <RedesSociales redStyle='w-[27%] grid grid-cols-4'/>
+    </div>
+    
+</div>
+<article id="modal" class="w-1/4 h-[50%] absolute top-[10%] right-[10%] z-40 bg-color5 hidden">
+    <Link 
+        content="w-full"
+        direccion="flex flex-col"/>
+</article>
+<script>
+    // Función para mostrar/ocultar el modal
+
+    // Seleccionamos el botón de menú y el modal
+const menuButton = document.getElementById('menu');
+const modal = document.getElementById('modal');
+
+// Función para alternar la visibilidad del modal
+function toggleModal() {
+  modal.classList.toggle('hidden');
+}
+function widthPantala() {
+    if (window.innerWidth > 768) {
+        menuButton.classList.add('hidden')
+    } else {
+        menuButton.classList.remove('hidden')
+    }
+}
+
+// Asignamos el evento de clic al botón de menú
+menuButton.addEventListener('click', toggleModal);
+widthPantala();
+
+window.addEventListener('resize', widthPantala);
+
+  </script>

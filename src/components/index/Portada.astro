@@ -1,0 +1,83 @@
+---
+import Boton from '../Boton.astro'
+
+const slides = [ 
+    {id:'car1', titulo:'Chicharrón de Chancho', des:'Deléitate con el irresistible chicharrón de chancho, una explosión de sabor y tradición en cada bocado.', src:'/img/chicharron.png'},
+    {id:'car2', titulo:'Cuy al Horno', des:'Descubre el crujiente y jugoso sabor del cuy frito, una joya de la cocina andina.', src:'/img/cuy.png'},
+    {id:'car3', titulo:'Trucha Frita', des:'Saborea la frescura y la delicadeza de la trucha frita, un manjar directamente de los Andes peruanos.', src:'/img/trucha.png'}
+]
+---
+
+<ul class="md:w-4/5 w-full h-full mx-auto relative flex flex-column">
+    <!-- Botón anterior -->
+    <button class="prev absolute w-1/4 h-full z-10 left-0 group flex justify-start items-center">
+        <span class="md:w-14 md:h-14 w-6 h-6 ml-2 md:ml-0 bg-[#8B4513] md:pt-[6px] pr-1 group-hover:bg-color5 group-hover:text-color2 text-color1 rounded-full md:text-4xl">&#10094;</span>
+    </button>
+
+    {slides.map(slide => (
+        <li id={slide.id} class=" w-full h-full">
+            <div class="w-3/5 p-[10%] h-full flex flex-col md:justify-evenly justify-center items-center">
+                <h2 class="w-full md:h-[40%] mb-2 md:mb-0 text-center text-2xl md:text-6xl font-title font-bold text-color6">{slide.titulo}</h2>
+                <p class="w-full md:h-[40%] mb-4 md:mb-0 text-color4 md:text-center text-justify text-xs md:text-2xl font-parrafo">{slide.des}</p>
+                <Boton 
+                    title="Ver Más" 
+                    ruta="/platillos"
+                    fondo="#FF4500"
+                    ancho="50%"
+                    hover="#228B22"
+                    alto="15%"
+                    txtColor="white"
+                    textResponsive='text-xl md:text-sm'
+                />
+            </div>
+            <div class="w-2/5 flex items-center justify-center">
+                <img class="w-3/4 object-contain drop-shadow-xl" src={slide.src} alt={slide.titulo} />
+            </div>
+        </li>
+    ))}
+
+    <!-- Botón siguiente -->
+    <button class="next absolute w-1/4 h-full z-10 right-0 group flex justify-end items-center ">
+        <span class="md:w-14 md:h-14 w-6 h-6 bg-[#8B4513] md:pt-[6px] pl-1 group-hover:bg-color5 group-hover:text-color2 text-color1 rounded-full md:text-4xl">&#10095;</span>
+    </button>
+</ul>
+
+<script>
+    const slide1 = document.getElementById('car1');
+    const slide2 = document.getElementById('car2');
+    const slide3 = document.getElementById('car3');
+    const slides = [slide1, slide2, slide3];
+    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+    const maxSlider = slides.length;
+    let currentSlide = 0;
+
+    function showSlide() {
+        // Ocultar todos los slides
+        slides.forEach(slide => {
+            slide.classList.add('hidden');
+        });
+
+        // Mostrar el slide actual
+        const activeSlide = slides[currentSlide];
+        activeSlide.classList.remove('hidden');
+        activeSlide.classList.add('flex');
+    }
+
+    function next() {
+        currentSlide = (currentSlide + 1) % maxSlider;
+        showSlide();
+    }
+
+    function prev() {
+        currentSlide = (currentSlide - 1 + maxSlider) % maxSlider;
+        showSlide();
+    }
+
+    nextButton.addEventListener('click', next);
+    prevButton.addEventListener('click', prev);
+    setInterval(next, 8000); // Cambiar automáticamente cada 6 segundos
+
+    showSlide(); // Muestra el primer slide al cargar
+</script>
+

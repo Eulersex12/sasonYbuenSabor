@@ -1,0 +1,32 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import Portada from '../components/index/Portada.astro';
+import Section from '../components/index/Section.astro';
+import Mapa from '../components/index/Mapa.astro';
+import Contento from '../components/index/Contento.astro';
+import Testimonials from '../components/index/Testimonials.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout 
+title="El mejor restaurante del Perú" 
+description='Disfruta del sabor auténtico en el corazón de Cajamarca - Perú. ¡Ven y prueba nuestra deliciosa cocina!'>
+<main class="w-full h-full">
+    <div class='w-full h-[320px] md:h-[550px] bg-carrucel mb-5'>
+        <Portada />
+    </div>
+    <div class="w-full bg-color2 mb-5">
+        <Section />
+    </div>
+    <div class="w-full bg-color1 pb-3 mb-5">
+        <Mapa/>
+        <Contento />
+    </div>
+    <div class="w-full">
+        <Testimonials />
+    </div>
+</main>
+</Layout>

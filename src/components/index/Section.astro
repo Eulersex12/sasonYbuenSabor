@@ -1,0 +1,89 @@
+---
+import PlatosPeru from './PlatosPeru.astro';
+import platillos from '../../platillos.json';
+---
+
+<section class="w-full mx-auto bg-color1 rounded-xl shadow-shadow1 p-5">
+  <ul class="w-4/5 md:w-[45%] flex mx-auto gap-x-[4%]">
+    <a 
+      class="tab w-full bg-color1 flex flex-col items-center rounded-xl shadow-shadow1 hover:bg-base transition" 
+      href="#desayuno"
+    >
+      <span class="text-color8"><i class="fas fa-coffee"></i></span>
+      <h3 class="text-color8 font-parrafo text-[12px] md:text-xl">Desayunos</h3>
+    </a>
+    <a 
+      class="tab w-full bg-color1 flex flex-col items-center rounded-xl shadow-shadow1 hover:bg-base transition " 
+      href="#almuerzo"
+    >
+      <span class="text-color8"><i class="fas fa-utensils"></i></span>
+      <h3 class="text-color8 font-parrafo text-[12px] md:text-xl">Almuerzos</h3>
+    </a>
+    <a 
+      class="tab w-full bg-color1 flex flex-col items-center rounded-xl shadow-shadow1 hover:bg-base transition " 
+      href="#cena"
+    >
+      <span class="text-color8"><i class="fas fa-wine-glass-alt"></i></span>
+      <h3 class="text-color8 font-parrafo text-[12px] md:text-xl">Cenas</h3>
+    </a>
+  </ul>
+</section>
+
+<div id="desayuno" class="section w-[95%] md:w-4/5 mx-auto md:grid-cols-3 grid-cols-2 md:mt-10 mt-5 gap-x-5 gap-y-4 hidden">
+  {platillos.desayunos.map(platillo => ( 
+    <PlatosPeru 
+      nombre={platillo.nombre} 
+      descripcion={platillo.descripcion} 
+      imagen={platillo.imagen} 
+    /> 
+  ))}
+</div>
+<div id="almuerzo" class="section w-[95%] md:w-4/5 mx-auto md:grid-cols-3 grid-cols-2 md:mt-10 mt-5 gap-x-5 gap-y-4 hidden">
+  {platillos.almuerzos.map(platillo => ( 
+    <PlatosPeru 
+      nombre={platillo.nombre} 
+      descripcion={platillo.descripcion} 
+      imagen={platillo.imagen} 
+    /> 
+  ))}
+</div>
+<div id="cena" class="section w-[95%] md:w-4/5 mx-auto md:grid-cols-3 grid-cols-2 md:mt-10 mt-5 gap-x-5 gap-y-4 hidden">
+  {platillos.cenas.map(platillo => ( 
+    <PlatosPeru 
+      nombre={platillo.nombre} 
+      descripcion={platillo.descripcion} 
+      imagen={platillo.imagen} 
+    /> 
+  ))}
+</div>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', event => {
+      event.preventDefault();
+      
+      tabs.forEach(t => {
+        t.classList.remove('bg-base');
+        t.classList.add('bg-color1');
+      })
+
+      tab.classList.remove('bg-color1');
+      tab.classList.add('bg-base');
+      const targetSection = document.querySelector(tab.getAttribute('href'));
+      
+      sections.forEach(section => {
+        section.classList.add('hidden');
+        section.classList.remove('grid');
+      });
+
+      targetSection.classList.add('grid');
+      targetSection.classList.remove('hidden');
+
+
+      
+    });
+  });
+</script>
+

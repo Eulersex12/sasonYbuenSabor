@@ -1,0 +1,48 @@
+---
+import CardsPlato from './CardsPlato.astro';
+import platillos from '../../platillos.json';
+---
+<main class="w-4/5 mx-auto bg-color2">
+  <h1 class="text-center font-title text-color6 md:text-7xl text-4xl font-bold mb-8">
+    Nuestros Platillos
+  </h1>
+  <section class="mb-10">
+    <h2 class="md:w-2/5 md:h-12 rounded-lg bg-color1 text-center text-color5 font-title font-semibold md:text-4xl text-2xl py-1 mb-5 shadow-shadow1 mx-auto">
+      Desayunos
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-7">
+      {platillos.desayunos.map(platillo => (
+        <CardsPlato 
+          nombre={platillo.nombre} 
+          descripcion={platillo.descripcion} 
+          imagen={platillo.imagen} />
+      ))}
+    </div>
+  </section>
+  <section class="mb-10">
+    <h2 class="md:w-2/5 md:h-12 rounded-lg bg-color1 text-center text-color5 font-title font-semibold md:text-4xl text-2xl py-1 mb-5 shadow-shadow1 mx-auto">
+      Almuerzos
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-7">
+      {platillos.almuerzos.map(platillo => (
+        <CardsPlato 
+          nombre={platillo.nombre} 
+          descripcion={platillo.descripcion} 
+          imagen={platillo.imagen} />
+      ))}
+    </div>
+  </section>
+  <section class="mb-10">
+    <h2 class="md:w-2/5 md:h-12 rounded-lg bg-color1 text-center text-color5 font-title font-semibold md:text-4xl text-2xl py-1 mb-5 shadow-shadow1 mx-auto">
+      Cenas
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-7">
+      {platillos.cenas.map(platillo => (
+        <CardsPlato 
+          nombre={platillo.nombre} 
+          descripcion={platillo.descripcion} 
+          imagen={platillo.imagen} />
+      ))}
+    </div>
+  </section>
+</main>

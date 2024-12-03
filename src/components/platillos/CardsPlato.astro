@@ -1,0 +1,32 @@
+---
+import Boton from '../Boton.astro'
+interface Props {
+  nombre: string;
+  descripcion: string;
+  imagen: string;
+}
+
+const { nombre, descripcion, imagen } = Astro.props;
+---
+
+<div class="w-full md:h-[450px] h-[250px] bg-color1 p-6 rounded-xl shadow-shadow4 ">
+  <div class="w-full h-1/2">
+    <img src={imagen} alt={nombre} class="w-full h-full object-cover rounded-xl"/>
+  </div>
+  <div class="w-full h-[40%] md:h-[30%] flex flex-col md:justify-between justify-center items-center md:pt-7 md:mb-4 bg-color">
+    <h3 class="md:text-3xl text-[14px] text-center font-title uppercase font-medium text-color7">{nombre}</h3>
+    <p class="text-color4 md:text-xl text-[10px] text-justify">{descripcion}</p>
+  </div>
+  
+  <Boton 
+    title='Delivery' 
+    ruta='/platillos'
+    fondo='#d35400'
+    ancho='100%'
+    hover='brown'
+    alto='10%'
+    txtColor='white'
+    textResponsive='md:text-xl text-xs'
+  />
+</div>
+
