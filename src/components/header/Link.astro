@@ -2,9 +2,10 @@
 interface Props {
     content: string
     direccion: string
+    alinText: string
 
 }
-const { direccion, content } = Astro.props;
+const { direccion, content, alinText } = Astro.props;
 const routs =[
     {ruta:'/', data:'inicio' }, 
     {ruta:'/servicios', data:'servicios'}, 
@@ -16,9 +17,9 @@ const routs =[
     <ul class= `${direccion}`>
         {
             routs.map(rout =>(
-                <li class="w-full h-full">
-                    <a class="w-full h-full flex justify-start items-center" href={rout.ruta}>
-                        <span class="uppercase font-title font-bold md:text-sm xl:text-lg">{rout.data}</span>
+                <li class="w-full h-full group">
+                    <a class={`w-full h-full flex ${alinText} items-center`} href={rout.ruta}>
+                        <span class="uppercase text-color3 font-title font-bold md:text-sm xl:text-lg group-hover:text-color5 group-hover:border-b-4 ">{rout.data}</span>
                     </a>
                 </li>
             ))

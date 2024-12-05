@@ -3,74 +3,115 @@ import Link from './Link.astro';
 import RedesSociales from './RedesSociales.astro';
 import IconoDelivery from './IconoDelivery.astro';
 ---
-<div class="w-full h-12 grid grid-cols-3 bg-color1 
-            md:w-4/5 md:h-24 md:mx-auto 
-            xl:w-4/5 xl:h-24 xl:mx-auto ">
-        <div class="w-full h-full flex items-center justify-center  ">
-            <i class="fa-solid fa-headset mx-1 text-lg md:text-3xl xl:text-4xl"></i>
-            <div class="w-4/5">
-                <h4 class="text-xs text-justify leading-none font-boton md:text-xl md:leading-none">Soporte al Cliente</h4>
-                <h5 class="text-xs leading-none font-title md:text-xl md:leading-none">51+ 999 999 99</h5>
+<!-- parte superior deñ encabezado -->
+<div id="color" class="w-full h-12 px-3 mt-3 grid grid-cols-3 bg-color1 items-center
+    sm:h-12 md:h-24 lg:h-24 xl:h-24 sm:w-full md:w-4/5 md:mx-auto lg:w-4/5 lg:mx-auto xl:w-4/5 xl:mx-auto
+">
+        <!-- soporte al cliente -->
+        <div class="w-full sm:h-12 md:h-24 lg:h-24 xl:h-24 flex">
+            <div class="w-1/5 h-full flex justify-start items-center">
+                <i class="fa-solid fa-headset text-sm sm:text-lg md:text-3xl lg:text-3xl"></i>
+            </div>
+            <div class="w-4/5 h-full flex flex-col justify-center items-start">
+                <h4 class="text-[8px] sm:text-sm md:text-lg  lg:text-lg font-parrafo">Soporte al Cliente</h4>
+                <h5 class="text-[10px] sm:text-sm md:text-lg lg:text-lg font-title">51+ 999 999 99</h5>
             </div>
         </div>
-        <div class="w-full h-full flex justify-center items-center ">
-            <img src="/cuy-vector.svg" alt="logo-cuy" class='w-1/4'>
-            <h2 class="text-xs text-center font-title leading-none uppercase md:text-xl xl:text-2xl">Sazón <br>y<br>buen sabor</h2>
+        <!-- aqui el logo mas su descripcion -->
+        <div class="w-full sm:h-12 md:h-24 lg:h-24 xl:h-24 flex justify-center items-center">
+            <div class="w-[50%] h-10 sm:h-12 md:h-24 lg:h-24 xl:h-24 flex justify-end items-center md:flex md:justify-end md:items-center">
+                <img src="/cuy-vector.svg" alt="logo-cuy" class='h-[95%] object-contain'>
+            </div>
+            <div class="w-[50%] md:flex md:justify-start">
+                <h2 class="text-[10px] text-center uppercase sm:text-xs md:text-sm lg:text-lg font-title">
+                    Sazón 
+                    <br>y<br>
+                    buen sabor
+                </h2>                
+            </div>
+            
         </div>
-        <div class="w-full h-full flex justify-end items-center ">
+        <!-- este es el icono de inicio de secion  -->
+        <div id="encabezado" class="w-full h-full flex justify-end items-center ">
             <a class="text-3xl md:text-4xl xl:text-5xl border-r-2 border-color9 pr-1" href="/administrador"><i class="fa-solid fa-user"></i></a>
             <div class="relative">
                 <div>
                     <IconoDelivery />
                 </div>
                 <span class="w-3 h-3 top-1 right-1 md:w-5 md:h-5 flex justify-center items-center absolute md:top-0 md:right-0 rounded-xl bg-color9 text-color9">
-                    <p class='text-xs md:text-base text-color1'>0</p>     
+                    <p id="numero" class='text-xs md:text-base text-color1'>0</p>     
                 </span>
                 
             </div>
-            <button id="menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            
         </div>
+        <!-- boton hamburguesa -->
+        <button id="menu" class="w-full sm:h-12 md:h-24 lg:h-24 xl:h-24 justify-end items-center">
+                <span class="bg-color4 text-xl rounded-sm px-1 text-color2 hover:bg-color3"><i class="fa-solid fa-bars"></i></span>
+        </button>
 
 </div>
-<div class="hidden md:w-full md:h-20 md:flex justify-center bg-base">
+<!-- aqui esta los navs -->
+<div id="navegate" class="hidden md:w-full md:h-20 md:flex justify-center bg-primary">
     <div class="w-4/5 h-full flex justify-between">
         <Link
             content='md:w-[60%] xl:w-[50%] h-full'
-            direccion='w-full h-full grid grid-cols-4'/>
+            direccion='w-full h-full grid grid-cols-4'
+            alinText="justify-start"
+            />
         <RedesSociales redStyle='w-[27%] grid grid-cols-4'/>
     </div>
     
 </div>
-<article id="modal" class="w-1/4 h-[50%] absolute top-[10%] right-[10%] z-40 bg-color5 hidden">
+<!--  modal a activar cuando se da click en el boton-->
+<article id="modal" class="w-2/5 h-[50%] absolute top-[55px] right-[6%] z-40 hidden">
     <Link 
-        content="w-full"
-        direccion="flex flex-col"/>
+        content="w-full h-full"
+        direccion="w-full h-full grid grid-rows-4 p-4 gap-y-2 "
+        alinText="justify-center bg-primary rounded-lg shadow-shadow12"
+    />
 </article>
 <script>
-    // Función para mostrar/ocultar el modal
+    
+    const encabezado = document.getElementById('encabezado') //icon hidden
+    const modal = document.getElementById('modal') //respoonsive hambuerguer
+    const menu = document.getElementById('menu') //boton active menu hamburguer
+    const color = document.getElementById('color') //color al acceder a la version movil
+    const links = document.getElementById('navegate') //numero del ancho del pantalla
+    
+    menu.addEventListener('click', () => {
+        modal.classList.toggle('hidden')
+    })
+    function mobilResponsive() {
+        let ancho = window.innerWidth;
 
-    // Seleccionamos el botón de menú y el modal
-const menuButton = document.getElementById('menu');
-const modal = document.getElementById('modal');
-
-// Función para alternar la visibilidad del modal
-function toggleModal() {
-  modal.classList.toggle('hidden');
-}
-function widthPantala() {
-    if (window.innerWidth > 768) {
-        menuButton.classList.add('hidden')
-    } else {
-        menuButton.classList.remove('hidden')
+        if (ancho < 765) {
+            color.classList.remove('bg-color1')
+            color.classList.add('bg-primary')
+            encabezado.classList.remove('flex')
+            encabezado.classList.add('hidden')
+            menu.classList.add('flex')
+            
+        } else {
+            color.classList.remove('bg-primary')
+            color.classList.add('bg-color1')
+            encabezado.classList.remove('hidden')
+            encabezado.classList.add('flex')
+            menu.classList.remove('flex')
+            menu.classList.add('hidden')
+        }
     }
-}
+    mobilResponsive();
+    window.addEventListener('resize', mobilResponsive)
+    //otro codigo ScrollBehavior captura las posiciones en la "Y"
 
-// Asignamos el evento de clic al botón de menú
-menuButton.addEventListener('click', toggleModal);
-widthPantala();
-
-window.addEventListener('resize', widthPantala);
-
-  </script>
+    window.addEventListener('scroll', () => {
+        let posicionY = window.scrollY; 
+        if (posicionY > 99) {
+            links.classList.add('fixed', 'top-0', 'left-0', 'z-20', 'shadow-shadow12')
+        } else {
+            links.classList.remove('fixed', 'top-0', 'left-0', 'z-20', 'shadow-shadow12')
+        }
+    })
+    
+</script>

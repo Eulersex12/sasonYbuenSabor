@@ -15,6 +15,7 @@ export default {
 				'shadow1': '0 0 5px rgba(0, 0, 0, 0.7)',       // Sombra color9 (negro)
 				'shadow10': '0 0 8px rgba(248, 180, 0, 0.8)',     // Sombra base (amarillo)
 				'shadow11': '0 0 8px rgba(245, 245, 220, 0.6)', // Sombra carrucel (beige)
+				'shadow12': '0 0 10px rgba(0, 0, 0, 0.7)',       // Sombra color12 fuerte (negro)
 			  },
 		},
 		fontFamily: {
@@ -32,9 +33,9 @@ export default {
 			'color7': '#16a085',
 			'color8': '#64299c',
 			'color9': 'black',
-			'base': '#F8B400',
-			'carrucel': 'beige',
-			'portada': '#F8B400',
+			'primary': '#F8B400',
+			'secundary': 'beige',
+			'color10': '#F8B400',
 		  },
 
 	},
