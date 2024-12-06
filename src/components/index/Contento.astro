@@ -6,43 +6,11 @@ const stats = [
 ];
 ---
 
-<div class="w-[95%] mx-auto flex justify-around my-12 bg-color1 shadow-shadow1 p-6 rounded-xl">
+<div class="w-[95%] mx-auto flex justify-around my-12 bg-color1 dark:bg-dark7 shadow-shadow1 p-6 rounded-xl">
   {stats.map(stat => (
     <div class="text-center">
-      <h3 class="font-title text-base mb-3 md:text-xl">{stat.value}</h3>
-      <p class="font-parrafo text-color4">{stat.label}</p>
+      <h3 class="font-title text-base mb-3 md:text-xl dark:text-secundary">{stat.value}</h3>
+      <p class="font-parrafo text-color4 dark:text-color1">{stat.label}</p>
     </div>
   ))}
 </div>
-
-<style>
-  .statistics-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px 0;
-    background-color: var(--color1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
-  }
-
-  .stat {
-    text-align: center;
-  }
-
-  .stat h3 {
-    font-family: var(--title);
-    color: var(--base);
-    margin-bottom: 10px;
-  }
-
-  .stat p {
-    font-family: var(--parrafo);
-    color: var(--color4);
-  }
-</style>
-<style>
-  @media (max-width: 768px){
-      
-  }
-</style>

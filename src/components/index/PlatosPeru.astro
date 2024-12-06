@@ -7,10 +7,10 @@ interface Props {
 
 const { nombre, descripcion, imagen } = Astro.props;
 ---
-<div class="w-full rounded-lg bg-color1 p-[5%] shadow-shadow1">
+<div class="w-full rounded-lg bg-color1 dark:bg-dark5 p-[5%] shadow-shadow1">
     <div class="w-full h-[200px]">
         <img class="w-full h-full rounded-xl object-cover " src={imagen} alt={nombre}>
     </div>
-    <h3 class="text-center text-color3 font-title uppercase font-bold text-xl">{nombre}</h3>
-    <p class="text-color4 font-parrafo md:text-left text-justify">{descripcion}</p>
+    <h3 class="text-center text-color3 font-title uppercase font-bold text-xl dark:text-secundary">{nombre}</h3>
+    <p class="text-color4 font-parrafo md:text-left text-justify dark:text-dark7">{descripcion}</p>
 </div>

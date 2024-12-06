@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			boxShadow: {
@@ -25,7 +26,7 @@ export default {
 		  },
 		  colors: {
 			'color1': '#F9F9F9',
-			'color2': '#E3E4E6',
+			'color2': '#E5E4E2',
 			'color3': '#333333',
 			'color4': '#666666',
 			'color5': '#d35400',
@@ -36,6 +37,15 @@ export default {
 			'primary': '#F8B400',
 			'secundary': 'beige',
 			'color10': '#F8B400',
+			//colores modo Dark
+			'dark1': '#7C0902',
+			'dark2': '#7F1734',
+			'dark3': '#4A412A',
+			'dark4': '#D473D4',
+			'dark5': '#2A3439',
+			'dark6': '#3EB489',
+			'dark7': '#BEBFC5',
+			'fondoDark': '#414A4C'
 		  },
 
 	},
