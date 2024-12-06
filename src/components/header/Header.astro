@@ -34,14 +34,14 @@ import IconoDelivery from './IconoDelivery.astro';
         <!-- este es el icono de inicio de secion  -->
         <ul id="encabezado" class="w-full h-full flex justify-end items-center ">
             <button id="toggle-dark-mode">
-                <i id="icono" class="fa-solid fa-sun text-sm sm:text-lg md:text-3xl lg:text-4xl"></i>
+                <i id="icono" class="fa-solid fa-sun text-color10 text-sm sm:text-lg md:text-3xl lg:text-4xl"></i>
             </button>
             <script>
                 const button = document.getElementById("toggle-dark-mode");
                 const icon = document.getElementById("icono");
                 if (localStorage.getItem('dark-mode') === 'true') {
                     document.documentElement.classList.add('dark')
-                    icon.classList.remove('fa-sun')
+                    icon.classList.remove('fa-sun', 'text-color10')
                     icon.classList.add('fa-moon', 'text-color1')
                 }
                 button.addEventListener("click", () => {
@@ -49,11 +49,11 @@ import IconoDelivery from './IconoDelivery.astro';
                     const isDarkMode = document.documentElement.classList.contains('dark')
                     localStorage.setItem('dark-mode', isDarkMode.toString())
                     if (isDarkMode) {
-                            icon.classList.remove('fa-sun')
+                            icon.classList.remove('fa-sun', 'text-color10')
                             icon.classList.add('fa-moon', 'text-color1')
                     } else {
                         icon.classList.remove('fa-moon', 'text-color1')
-                        icon.classList.add('fa-sun')
+                        icon.classList.add('fa-sun', 'text-color10')
                     }
 
                 });
