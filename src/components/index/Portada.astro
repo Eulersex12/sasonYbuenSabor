@@ -16,22 +16,19 @@ const slides = [
 
     {slides.map(slide => (
         <li id={slide.id} class=" w-full h-full">
-            <div class="w-3/5 p-[10%] h-full flex flex-col md:justify-evenly justify-center items-center">
-                <h2 class="w-full md:h-[40%] mb-2 md:mb-0 text-center text-2xl md:text-6xl font-title font-bold text-color6">{slide.titulo}</h2>
-                <p class="w-full md:h-[40%] mb-4 md:mb-0 text-color4 md:text-center text-justify text-xs md:text-2xl font-parrafo">{slide.des}</p>
+            <div class="w-1/2 md:w-3/5 p-[10%] h-full flex flex-col md:justify-evenly justify-center items-center">
+                <h2 class="w-full md:h-[40%] mb-2 md:mb-0 text-center text-base leading-none md:text-6xl font-title font-bold text-color6">{slide.titulo}</h2>
+                <p class="w-full md:h-[40%] mb-4 md:mb-0 text-color4 text-center text-[8px] md:text-2xl font-parrafo">{slide.des}</p>
                 <Boton 
                     title="Ver Más" 
                     ruta="/platillos"
-                    fondo="#FF4500"
-                    ancho="50%"
-                    hover="#228B22"
-                    alto="15%"
-                    txtColor="white"
-                    textResponsive='text-xl md:text-sm'
+                    hover="bg-color5 hover:bg-color6" 
+                    ancho="w-4/5 h-[6%] md:h-[10%] md:w-1/2 md:py-4 rounded-md md:rounded-lg" 
+                    textColor="text-color1 font-boton text-[7px] md:text-xl"
                 />
             </div>
-            <div class="w-2/5 flex items-center justify-center">
-                <img class="w-3/4 object-contain drop-shadow-xl" src={slide.src} alt={slide.titulo} />
+            <div class="w-1/2 md:w-2/5 flex items-center justify-start">
+                <img class="w-4/5 object-contain drop-shadow-xl" src={slide.src} alt={slide.titulo} />
             </div>
         </li>
     ))}

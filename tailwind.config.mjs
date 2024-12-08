@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				'shadow9': '0 0 8px rgba(227, 228, 230, 0.5)', // Sombra color2 (gris claro)
+				'shadow9': '0 0 8px rgba(0, 0, 0, 0.7)', // Sombra color2 (gris claro)
 				'shadow2': '0 0 8px rgba(51, 51, 51, 0.7)',    // Sombra color3 (oscuro)
 				'shadow3': '0 0 8px rgba(249, 249, 249, 0.5)', // Sombra color1 (claro)
 				'shadow4': '0 0 8px rgba(102, 102, 102, 0.6)', // Sombra color4 (gris medio)
